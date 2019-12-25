@@ -13,6 +13,10 @@ public class DemoSpring {
 
       System.out.println(musicPlayerBean.getName());
       System.out.println(musicPlayerBean.getVolume());
+
+      // MusicPlayer and RockMusic scopes = prototype => Spring-container creates beans again and do not destroying them
+      MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
+      mp.playMusic();
     }
   }
 }

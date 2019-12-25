@@ -4,6 +4,14 @@ package ru.koshkarovvitaliy;
  */
 
 public class ClassicalMusic implements Music {
+  public void doInit() {
+    System.out.println("Initialisation of " + this.toString() + " instance");
+  }
+
+  public void doDestroy() {
+    System.out.println("Destroying of " + this.toString() + " instance");
+  }
+
   @Override
   public String getSong() {
     return "Moonlight sonata";

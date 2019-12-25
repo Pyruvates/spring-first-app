@@ -18,6 +18,14 @@ public class MusicPlayer {
     this.musicList = list;
   }
 
+  public void doInit() {
+    System.out.println("Init " + this.toString() + " instance");
+  }
+
+  public void doDestroy() {
+    System.out.println("Destroy " + this.toString() + " instance");
+  }
+
   public void setMusicList(List<Music> list) {
     this.musicList = list;
   }
