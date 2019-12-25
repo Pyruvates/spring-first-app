@@ -3,20 +3,23 @@ package ru.koshkarovvitaliy;
  * Creating by Koshkarov Vitaliy on 25.12.2019
  */
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class MusicPlayer {
-  private Music music;
+  private List<Music> musicList = new ArrayList<>();
   private String name;
   private int volume;
 
   public MusicPlayer() {}
 
   // IoC
-  public MusicPlayer(Music music) {
-    this.music = music;
+  public MusicPlayer(List<Music> list) {
+    this.musicList = list;
   }
 
-  public void setMusic(Music music) {
-    this.music = music;
+  public void setMusicList(List<Music> list) {
+    this.musicList = list;
   }
 
   public String getName() {
@@ -36,6 +39,6 @@ public class MusicPlayer {
   }
 
   public void playMusic() {
-    System.out.println("Playing \"" + music.getSong() + "\"");
+    this.musicList.forEach( elem -> System.out.println("Playing \"" + elem.getSong() + "\""));
   }
 }
