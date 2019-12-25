@@ -10,6 +10,9 @@ public class DemoSpring {
     try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
       MusicPlayer mPlayerBean = context.getBean("musicPlayer", MusicPlayer.class);
       mPlayerBean.playMusic();
+
+      System.out.println(mPlayerBean.getName());
+      System.out.println(mPlayerBean.getVolume());
     }
   }
 }
