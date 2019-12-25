@@ -12,7 +12,8 @@
     <bean id="classicalMusic"
             class="ru.koshkarovvitaliy.ClassicalMusic"
             init-method="doInit"
-            destroy-method="doDestroy">
+            destroy-method="doDestroy"
+            factory-method="factoryMethod">
     </bean>
 
     <bean id="rockMusic"

@@ -4,6 +4,12 @@ package ru.koshkarovvitaliy;
  */
 
 public class ClassicalMusic implements Music {
+  private ClassicalMusic() {}
+
+  public static ClassicalMusic factoryMethod() {
+    return new ClassicalMusic();
+  }
+
   public void doInit() {
     System.out.println("Initialisation of " + this.toString() + " instance");
   }
